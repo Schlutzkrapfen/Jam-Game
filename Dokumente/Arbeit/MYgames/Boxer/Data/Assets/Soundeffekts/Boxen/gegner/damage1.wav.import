@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/damage1.wav-56ddde8c5ef61537f24e019e33aea650.sample"
+
+[deps]
+
+source_file="res://Data/Assets/Soundeffekts/Boxen/gegner/damage1.wav"
+dest_files=[ "res://.import/damage1.wav-56ddde8c5ef61537f24e019e33aea650.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

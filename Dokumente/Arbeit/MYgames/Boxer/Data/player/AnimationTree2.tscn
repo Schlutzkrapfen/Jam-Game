@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Data/Player.tres" type="AnimationNodeStateMachine" id=1]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[node name="AnimationTree2" type="AnimationTree"]
+tree_root = ExtResource( 1 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 1 )
+parameters/Block/Moving/add_amount = 0
+parameters/Block/Seek/seek_position = 0.0
+"parameters/Block/Seek 2/seek_position" = 0.0
+"parameters/Block/Seek 3/seek_position" = 0.0
+"parameters/Block/Seek 4/seek_position" = 0.0
+parameters/Block/Stehen/add_amount = 0
+parameters/Block/TimeScale/scale = 0.6
+"parameters/Block/TimeScale 2/scale" = 0.4
+parameters/Block/position/blend_amount = 0
+parameters/Charge/Moving/add_amount = 0.0
+parameters/Charge/Seek/seek_position = -1.0
+"parameters/Charge/Seek 2/seek_position" = 0.0
+"parameters/Charge/Seek 3/seek_position" = 0.0
+parameters/Charge/TimeScale/scale = 0.3
+"parameters/Charge/TimeScale 2/scale" = 0.4
+parameters/Charge/position/blend_amount = 0
+parameters/Damage/Add2/add_amount = 1.0
+parameters/Damage/Blend2/blend_amount = 0.0
+parameters/Damage/Blend3/blend_amount = 1.0
+parameters/Deth/Blend2/blend_amount = 0
+parameters/Deth/Blend3/blend_amount = 0
+parameters/Idle/Blend3/blend_amount = 0.0
+parameters/Idle/Stehen/add_amount = 0.0
+parameters/Idle/TimeScale/scale = 0.75
+"parameters/Idle/TimeScale 2/scale" = 0.8

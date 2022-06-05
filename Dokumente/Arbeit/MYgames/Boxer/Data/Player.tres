@@ -1,0 +1,391 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=102 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=356]
+animation = "Block abgewehrtet"
+
+[sub_resource type="AnimationNodeAnimation" id=246]
+animation = "Gehen"
+
+[sub_resource type="AnimationNodeAnimation" id=247]
+animation = "Rückwärts gehen"
+
+[sub_resource type="AnimationNodeAnimation" id=263]
+animation = "stehen"
+
+[sub_resource type="AnimationNodeAnimation" id=249]
+animation = "Block unten"
+
+[sub_resource type="AnimationNodeAnimation" id=250]
+animation = "Block oben"
+
+[sub_resource type="AnimationNodeAnimation" id=251]
+animation = "Block"
+
+[sub_resource type="AnimationNodeAdd3" id=252]
+
+[sub_resource type="AnimationNodeTimeSeek" id=324]
+
+[sub_resource type="AnimationNodeTimeSeek" id=325]
+
+[sub_resource type="AnimationNodeTimeSeek" id=265]
+
+[sub_resource type="AnimationNodeTimeSeek" id=326]
+
+[sub_resource type="AnimationNodeAdd2" id=264]
+
+[sub_resource type="AnimationNodeTimeScale" id=257]
+
+[sub_resource type="AnimationNodeTimeScale" id=258]
+
+[sub_resource type="AnimationNodeBlend3" id=259]
+
+[sub_resource type="AnimationNodeBlendTree" id=260]
+graph_offset = Vector2( -1172.07, 58.8333 )
+nodes/Animation/node = SubResource( 251 )
+nodes/Animation/position = Vector2( -960, 200 )
+"nodes/Animation 2/node" = SubResource( 246 )
+"nodes/Animation 2/position" = Vector2( -400, 360 )
+"nodes/Animation 3/node" = SubResource( 247 )
+"nodes/Animation 3/position" = Vector2( -480, 80 )
+"nodes/Animation 4/node" = SubResource( 263 )
+"nodes/Animation 4/position" = Vector2( -500, 260 )
+"nodes/Animation 5/node" = SubResource( 249 )
+"nodes/Animation 5/position" = Vector2( -980, 80 )
+"nodes/Animation 6/node" = SubResource( 250 )
+"nodes/Animation 6/position" = Vector2( -980, 300 )
+nodes/Moving/node = SubResource( 252 )
+nodes/Moving/position = Vector2( 180, 120 )
+nodes/Seek/node = SubResource( 326 )
+nodes/Seek/position = Vector2( -780, 120 )
+"nodes/Seek 2/node" = SubResource( 324 )
+"nodes/Seek 2/position" = Vector2( -780, 220 )
+"nodes/Seek 3/node" = SubResource( 325 )
+"nodes/Seek 3/position" = Vector2( -760, 340 )
+"nodes/Seek 4/node" = SubResource( 265 )
+"nodes/Seek 4/position" = Vector2( -340, 240 )
+nodes/Stehen/node = SubResource( 264 )
+nodes/Stehen/position = Vector2( -180, 160 )
+nodes/TimeScale/node = SubResource( 258 )
+nodes/TimeScale/position = Vector2( -220, 320 )
+"nodes/TimeScale 2/node" = SubResource( 257 )
+"nodes/TimeScale 2/position" = Vector2( -260, 60 )
+nodes/output/position = Vector2( 480, 100 )
+nodes/position/node = SubResource( 259 )
+nodes/position/position = Vector2( -620, 180 )
+node_connections = [ "position", 0, "Seek", "position", 1, "Seek 2", "position", 2, "Seek 3", "output", 0, "Moving", "Seek 3", 0, "Animation 6", "Seek 2", 0, "Animation", "Moving", 0, "TimeScale 2", "Moving", 1, "Stehen", "Moving", 2, "TimeScale", "Seek 4", 0, "Animation 4", "Seek", 0, "Animation 5", "TimeScale 2", 0, "Animation 3", "TimeScale", 0, "Animation 2", "Stehen", 0, "position", "Stehen", 1, "Seek 4" ]
+
+[sub_resource type="AnimationNodeAnimation" id=285]
+animation = "Box High"
+
+[sub_resource type="AnimationNodeAnimation" id=286]
+animation = "Box low"
+
+[sub_resource type="AnimationNodeAnimation" id=287]
+animation = "Box"
+
+[sub_resource type="AnimationNodeAnimation" id=275]
+animation = "charge"
+
+[sub_resource type="AnimationNodeAnimation" id=276]
+animation = "Charge High "
+
+[sub_resource type="AnimationNodeAnimation" id=282]
+animation = "Rückwärts gehen"
+
+[sub_resource type="AnimationNodeAnimation" id=283]
+animation = "Gehen"
+
+[sub_resource type="AnimationNodeAnimation" id=277]
+animation = "Charge low"
+
+[sub_resource type="AnimationNodeAdd3" id=284]
+
+[sub_resource type="AnimationNodeTimeSeek" id=278]
+
+[sub_resource type="AnimationNodeTimeSeek" id=279]
+
+[sub_resource type="AnimationNodeTimeSeek" id=280]
+
+[sub_resource type="AnimationNodeTimeScale" id=267]
+
+[sub_resource type="AnimationNodeTimeScale" id=268]
+
+[sub_resource type="AnimationNodeBlend3" id=281]
+
+[sub_resource type="AnimationNodeBlendTree" id=269]
+graph_offset = Vector2( -238.299, 6.496 )
+nodes/Animation/node = SubResource( 277 )
+nodes/Animation/position = Vector2( -540, 60 )
+"nodes/Animation 2/node" = SubResource( 275 )
+"nodes/Animation 2/position" = Vector2( -540, 180 )
+"nodes/Animation 3/node" = SubResource( 276 )
+"nodes/Animation 3/position" = Vector2( -540, 300 )
+"nodes/Animation 4/node" = SubResource( 282 )
+"nodes/Animation 4/position" = Vector2( 140, 0 )
+"nodes/Animation 5/node" = SubResource( 283 )
+"nodes/Animation 5/position" = Vector2( 120, 300 )
+nodes/Moving/node = SubResource( 284 )
+nodes/Moving/position = Vector2( 540, 80 )
+nodes/Seek/node = SubResource( 280 )
+nodes/Seek/position = Vector2( -280, 160 )
+"nodes/Seek 2/node" = SubResource( 278 )
+"nodes/Seek 2/position" = Vector2( -280, 60 )
+"nodes/Seek 3/node" = SubResource( 279 )
+"nodes/Seek 3/position" = Vector2( -280, 280 )
+nodes/TimeScale/node = SubResource( 268 )
+nodes/TimeScale/position = Vector2( 400, 20 )
+"nodes/TimeScale 2/node" = SubResource( 267 )
+"nodes/TimeScale 2/position" = Vector2( 380, 220 )
+nodes/output/position = Vector2( 820, 60 )
+nodes/position/node = SubResource( 281 )
+nodes/position/position = Vector2( -40, 100 )
+node_connections = [ "position", 0, "Seek 2", "position", 1, "Seek", "position", 2, "Seek 3", "output", 0, "Moving", "Seek 3", 0, "Animation 3", "Seek 2", 0, "Animation", "Moving", 0, "TimeScale", "Moving", 1, "position", "Moving", 2, "TimeScale 2", "Seek", 0, "Animation 2", "TimeScale 2", 0, "Animation 5", "TimeScale", 0, "Animation 4" ]
+
+[sub_resource type="AnimationNodeAdd2" id=322]
+
+[sub_resource type="AnimationNodeAnimation" id=308]
+animation = "dam oben"
+
+[sub_resource type="AnimationNodeAnimation" id=309]
+animation = "dam unten"
+
+[sub_resource type="AnimationNodeAnimation" id=310]
+animation = "dam untercut"
+
+[sub_resource type="AnimationNodeAnimation" id=323]
+animation = "leer füße"
+
+[sub_resource type="AnimationNodeAnimation" id=311]
+animation = "dam"
+
+[sub_resource type="AnimationNodeBlend2" id=321]
+
+[sub_resource type="AnimationNodeBlend3" id=313]
+
+[sub_resource type="AnimationNodeBlendTree" id=314]
+graph_offset = Vector2( -364.734, 152.25 )
+nodes/Add2/node = SubResource( 322 )
+nodes/Add2/position = Vector2( 520, 100 )
+nodes/Animation/node = SubResource( 311 )
+nodes/Animation/position = Vector2( 80, 260 )
+"nodes/Animation 2/node" = SubResource( 308 )
+"nodes/Animation 2/position" = Vector2( 200, 360 )
+"nodes/Animation 3/node" = SubResource( 309 )
+"nodes/Animation 3/position" = Vector2( -280, 60 )
+"nodes/Animation 4/node" = SubResource( 310 )
+"nodes/Animation 4/position" = Vector2( -240, 200 )
+"nodes/Animation 5/node" = SubResource( 323 )
+"nodes/Animation 5/position" = Vector2( 391.884, 316.8 )
+nodes/Blend2/node = SubResource( 321 )
+nodes/Blend2/position = Vector2( 60, 60 )
+nodes/Blend3/node = SubResource( 313 )
+nodes/Blend3/position = Vector2( 300, 60 )
+nodes/output/position = Vector2( 720, 140 )
+node_connections = [ "output", 0, "Add2", "Add2", 0, "Blend3", "Add2", 1, "Animation 5", "Blend3", 0, "Blend2", "Blend3", 1, "Animation", "Blend3", 2, "Animation 2", "Blend2", 0, "Animation 3", "Blend2", 1, "Animation 4" ]
+
+[sub_resource type="AnimationNodeAnimation" id=331]
+animation = "Deth unten"
+
+[sub_resource type="AnimationNodeAnimation" id=332]
+animation = "Deth oben"
+
+[sub_resource type="AnimationNodeAnimation" id=333]
+animation = "Deth untercut"
+
+[sub_resource type="AnimationNodeAnimation" id=334]
+animation = "Deth"
+
+[sub_resource type="AnimationNodeBlend2" id=335]
+
+[sub_resource type="AnimationNodeBlend3" id=336]
+
+[sub_resource type="AnimationNodeBlendTree" id=337]
+graph_offset = Vector2( -496.66, -18 )
+nodes/Animation/node = SubResource( 334 )
+nodes/Animation/position = Vector2( 280, 180 )
+"nodes/Animation 2/node" = SubResource( 331 )
+"nodes/Animation 2/position" = Vector2( 20, 0 )
+"nodes/Animation 3/node" = SubResource( 332 )
+"nodes/Animation 3/position" = Vector2( 280, 280 )
+"nodes/Animation 4/node" = SubResource( 333 )
+"nodes/Animation 4/position" = Vector2( 20, 120 )
+nodes/Blend2/node = SubResource( 335 )
+nodes/Blend2/position = Vector2( 240, 0 )
+nodes/Blend3/node = SubResource( 336 )
+nodes/Blend3/position = Vector2( 500, 60 )
+nodes/output/position = Vector2( 720, 100 )
+node_connections = [ "output", 0, "Blend3", "Blend3", 0, "Blend2", "Blend3", 1, "Animation", "Blend3", 2, "Animation 3", "Blend2", 0, "Animation 2", "Blend2", 1, "Animation 4" ]
+
+[sub_resource type="AnimationNodeAnimation" id=327]
+animation = "Gehen 2"
+
+[sub_resource type="AnimationNodeAnimation" id=330]
+animation = "Rückwärts gehen 2"
+
+[sub_resource type="AnimationNodeAnimation" id=307]
+animation = "stehen"
+
+[sub_resource type="AnimationNodeAnimation" id=306]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeBlend3" id=329]
+
+[sub_resource type="AnimationNodeAdd2" id=304]
+
+[sub_resource type="AnimationNodeTimeScale" id=346]
+
+[sub_resource type="AnimationNodeTimeScale" id=241]
+
+[sub_resource type="AnimationNodeBlendTree" id=242]
+graph_offset = Vector2( -200.128, 196.5 )
+nodes/Animation/node = SubResource( 306 )
+nodes/Animation/position = Vector2( -540, 180 )
+"nodes/Animation 2/node" = SubResource( 327 )
+"nodes/Animation 2/position" = Vector2( -160, 340 )
+"nodes/Animation 3/node" = SubResource( 330 )
+"nodes/Animation 3/position" = Vector2( -400, 20 )
+"nodes/Animation 8/node" = SubResource( 307 )
+"nodes/Animation 8/position" = Vector2( -520, 300 )
+nodes/Blend3/node = SubResource( 329 )
+nodes/Blend3/position = Vector2( 180, 120 )
+nodes/Stehen/node = SubResource( 304 )
+nodes/Stehen/position = Vector2( -300, 160 )
+nodes/TimeScale/node = SubResource( 241 )
+nodes/TimeScale/position = Vector2( -120, 60 )
+"nodes/TimeScale 2/node" = SubResource( 346 )
+"nodes/TimeScale 2/position" = Vector2( 20, 300 )
+nodes/output/position = Vector2( 520, 140 )
+node_connections = [ "output", 0, "Blend3", "Blend3", 0, "TimeScale", "Blend3", 1, "Stehen", "Blend3", 2, "TimeScale 2", "TimeScale 2", 0, "Animation 2", "TimeScale", 0, "Animation 3", "Stehen", 0, "Animation", "Stehen", 1, "Animation 8" ]
+
+[sub_resource type="AnimationNodeAnimation" id=347]
+animation = "roll"
+
+[sub_resource type="AnimationNodeAnimation" id=288]
+animation = "uppercut"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=261]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=262]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=270]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=271]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=272]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=273]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=289]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=290]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=291]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=292]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=293]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=294]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=295]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=296]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=315]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=316]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=317]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=318]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=319]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=320]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=338]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=339]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=340]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=341]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=342]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=343]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=344]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=345]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=348]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=349]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=350]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=351]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=352]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=353]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=354]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=355]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=357]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=358]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=359]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=360]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=361]
+switch_mode = 2
+
+[resource]
+states/Block/node = SubResource( 260 )
+states/Block/position = Vector2( 550, 14.048 )
+"states/Block abgewehrtet/node" = SubResource( 356 )
+"states/Block abgewehrtet/position" = Vector2( 1032.73, -150.857 )
+states/Box/node = SubResource( 287 )
+states/Box/position = Vector2( 1408, -50 )
+"states/Box High/node" = SubResource( 285 )
+"states/Box High/position" = Vector2( 1378, -107.952 )
+"states/Box low/node" = SubResource( 286 )
+"states/Box low/position" = Vector2( 1408, 5.048 )
+states/Charge/node = SubResource( 269 )
+states/Charge/position = Vector2( 966, 14.048 )
+states/Damage/node = SubResource( 314 )
+states/Damage/position = Vector2( 550, 213.932 )
+states/Deth/node = SubResource( 337 )
+states/Deth/position = Vector2( 953, 213.932 )
+states/Idle/node = SubResource( 242 )
+states/Idle/position = Vector2( 960, 98 )
+states/roll/node = SubResource( 347 )
+states/roll/position = Vector2( 781.733, -107.952 )
+states/uppercut/node = SubResource( 288 )
+states/uppercut/position = Vector2( 1408, 75 )
+transitions = [ "Idle", "Block", SubResource( 261 ), "Block", "Idle", SubResource( 262 ), "Idle", "Charge", SubResource( 270 ), "Charge", "Idle", SubResource( 271 ), "Charge", "Block", SubResource( 272 ), "Block", "Charge", SubResource( 273 ), "Charge", "Box low", SubResource( 289 ), "Charge", "Box", SubResource( 290 ), "Charge", "Box High", SubResource( 291 ), "Box low", "Idle", SubResource( 292 ), "Box", "Idle", SubResource( 293 ), "Box High", "Idle", SubResource( 294 ), "Charge", "uppercut", SubResource( 295 ), "uppercut", "Idle", SubResource( 296 ), "Charge", "Damage", SubResource( 315 ), "Block", "Damage", SubResource( 316 ), "Idle", "Damage", SubResource( 317 ), "Damage", "Idle", SubResource( 318 ), "Damage", "Charge", SubResource( 319 ), "Damage", "Block", SubResource( 320 ), "Idle", "Deth", SubResource( 338 ), "Damage", "Deth", SubResource( 339 ), "Block", "Deth", SubResource( 340 ), "Charge", "Deth", SubResource( 341 ), "Box High", "Deth", SubResource( 342 ), "Box", "Deth", SubResource( 343 ), "Box low", "Deth", SubResource( 344 ), "uppercut", "Deth", SubResource( 345 ), "Charge", "roll", SubResource( 348 ), "Block", "roll", SubResource( 349 ), "Damage", "roll", SubResource( 350 ), "roll", "Charge", SubResource( 351 ), "roll", "Block", SubResource( 352 ), "roll", "Damage", SubResource( 353 ), "Idle", "roll", SubResource( 354 ), "roll", "Idle", SubResource( 355 ), "Box High", "Block abgewehrtet", SubResource( 357 ), "Box", "Block abgewehrtet", SubResource( 358 ), "Box low", "Block abgewehrtet", SubResource( 359 ), "uppercut", "Block abgewehrtet", SubResource( 360 ), "Block abgewehrtet", "Idle", SubResource( 361 ) ]
+start_node = "Idle"
+end_node = "Deth"
+graph_offset = Vector2( 371.733, -214.857 )

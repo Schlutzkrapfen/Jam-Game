@@ -1,0 +1,102 @@
+Version 0.0.1
+The first Level was published
+
+Version 0.0.2
+-added a intro/difficult select-screen
+
+-added a camera zoom feature
+
+-changed the lawyer of the Enemy so you can see him better
+
+-made the enemy weaker and he cant  lock you in the damage animation
+
+Version 0.0.3
+
+- added a second clock that will play for the last 5 seconds
+
+-made the damage animation from the enemy longer when the enemy is angry
+
+-added knock-back
+
+-added a new movement script for the enemy
+
+-removed the middle punch
+
+-The Quit button will now bring you to the main menu 
+
+-added different gameoverscreens
+
+Bugs:
+
+-changed the size of the Text margin in the intro that the text wont be cut of
+
+-cant hit a dead enemy anymore
+
+-a low block wont defend a medium attack anymore
+
+-can now restart a game
+
+Version 0.0.4
+
+-The Game is finally open Source
+
+-removed uppercut for the player and the enemy(will be used in later Levels)
+
+-enemy can now turn around
+
+-Camera now works with when the enemy is left of you
+
+-the enemy will now not stand just there if you leaf the area where you are still in range
+
+-can now go throw the enemy
+
+-enemy has now a roll
+
+-made the rolling animation better
+
+Bugs:
+
+-removed the next level buttons
+
+
+-it will now show if you run out of time with the correct end screen
+
+-second Timer know start at 5 seconds
+
+- the high punch of the enemy is know better positions with the animation
+
+-enemy cant punch anymore when its blocking
+
+-the animation if you are switching often up and down wont be stuck anymore
+
+
+Version 0.0.5 (NOT FINISHED)
+
+-Added a second Level with a new Enemy and a rollmove for the player
+
+--Removed some of enemies health
+
+-Enemy wont roll around so often anymore
+
+Bugs:
+
+-enemy cant fall easily of the map
+
+-game wont crash anymore when you try to intimidate the enemy
+
+-restart button will now bring you to the first level not to the intro
+
+-shows the right amount how scared/angry the enemy is on the progress bar
+
+-can now skip the text from the enemy
+
+- in the intro some letter wont be cut off
+
+-the text in the first level wont go out of the screen anymore
+
+-button will stay invisible at the breaks
+
+
+
+
+

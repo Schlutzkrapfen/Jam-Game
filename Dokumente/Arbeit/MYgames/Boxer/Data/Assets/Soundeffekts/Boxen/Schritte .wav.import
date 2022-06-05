@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Schritte .wav-d6d4c78205e468f9d9121a5c39d49e47.sample"
+
+[deps]
+
+source_file="res://Data/Assets/Soundeffekts/Boxen/Schritte .wav"
+dest_files=[ "res://.import/Schritte .wav-d6d4c78205e468f9d9121a5c39d49e47.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

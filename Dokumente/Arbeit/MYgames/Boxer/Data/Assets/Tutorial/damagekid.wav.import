@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/damagekid.wav-00886696da3aff398c9c7e093b3560e8.sample"
+
+[deps]
+
+source_file="res://Data/Assets/Tutorial/damagekid.wav"
+dest_files=[ "res://.import/damagekid.wav-00886696da3aff398c9c7e093b3560e8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

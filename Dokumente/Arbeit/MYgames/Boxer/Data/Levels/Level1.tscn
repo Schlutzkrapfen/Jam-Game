@@ -1,0 +1,212 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Data/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Data/Gegner/rolling_joe.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Data/Levels/Label.gd" type="Script" id=3]
+[ext_resource path="res://Data/Levels/Level1.gd" type="Script" id=4]
+[ext_resource path="res://Data/Assets/Background/Hintergrund lvl1.png" type="Texture" id=5]
+[ext_resource path="res://Data/Livebar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Data/Gegner/ConnectionII.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Data/Assets/Background/vordergrund.png" type="Texture" id=8]
+[ext_resource path="res://Data/Assets/Background/Timer.png" type="Texture" id=9]
+[ext_resource path="res://Data/Hintergrund/Hintergrund.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Data/UI/Settings.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Data/Assets/Musik/erster gegner.wav" type="AudioStream" id=12]
+[ext_resource path="res://Data/Hintergrund/gegnerhealtbar.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Data/Hintergrund/gegnerhealtbar.gd" type="Script" id=14]
+[ext_resource path="res://Data/Fonts/Uhr.tres" type="DynamicFont" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 281.782, 10 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Uhr"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6.49714, 41.8433 )
+
+[sub_resource type="CanvasItemMaterial" id=6]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 39.9346 )
+
+[node name="Level1" type="Node2D"]
+position = Vector2( 497.438, 272.692 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -431.109 ]
+}
+
+[node name="Hintergrund" parent="." instance=ExtResource( 10 )]
+position = Vector2( 33.7819, -269.82 )
+scale = Vector2( 2, 1 )
+
+[node name="Timer2" type="Sprite" parent="."]
+position = Vector2( 25.557, -112 )
+scale = Vector2( 1.8, 1.1 )
+texture = ExtResource( 9 )
+
+[node name="HintergrundLvl1" type="Sprite" parent="."]
+position = Vector2( 206.085, -270.314 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, -23.9729 )
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -0.919739, -2 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+pause_mode = 1
+process_mode = 0
+wait_time = 30.0
+
+[node name="Uhr" type="Label" parent="."]
+margin_left = -22.0
+margin_top = -165.0
+margin_right = 82.0
+margin_bottom = -59.0
+custom_colors/font_color = Color( 1.2, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "0 00:00"
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Uhr"]
+offset = Vector2( 920, 200 )
+transform = Transform2D( 1, 0, 0, 1, 920, 200 )
+
+[node name="Label" type="Label" parent="Uhr/CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 40.0
+margin_bottom = 50.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 15 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Uhr/CanvasLayer"]
+anims/RESET = SubResource( 4 )
+anims/Uhr = SubResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -100, -62 )
+
+[node name="rolling_joe" parent="." instance=ExtResource( 2 )]
+position = Vector2( 166.895, -59.5964 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( -278.6, -78.4889 )
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -3.83798, -0.203094 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+material = SubResource( 6 )
+position = Vector2( 287.35, -77.2605 )
+shape = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -18 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+process_mode = 0
+smoothing_enabled = true
+
+[node name="Vordergrund" type="Sprite" parent="."]
+position = Vector2( 205.418, -270.414 )
+texture = ExtResource( 8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Healtbar" parent="CanvasLayer" instance=ExtResource( 6 )]
+anchor_right = 1.0
+margin_left = 16.0
+margin_top = 32.0
+margin_right = -903.0
+margin_bottom = 44.0
+
+[node name="TextureProgress" parent="CanvasLayer" instance=ExtResource( 13 )]
+visible = false
+margin_left = 1800.0
+margin_top = 32.0
+margin_right = 1902.0
+margin_bottom = 76.0
+max_value = 15.0
+value = 15.0
+script = ExtResource( 14 )
+
+[node name="Settings" parent="." instance=ExtResource( 11 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
+bus = "Musik"
+
+[connection signal="Healt_lvlStart" from="." to="Player" method="_on_Level1_Healt_lvlStart"]
+[connection signal="Healt_lvlStart" from="." to="CanvasLayer/Healtbar" method="_on_Level1_Healt_lvlStart"]
+[connection signal="Healt_lvlStartgegner" from="." to="rolling_joe" method="_on_Level1_Healt_lvlStartgegner"]
+[connection signal="Healt_lvlStartgegner" from="." to="CanvasLayer/TextureProgress" method="_on_Level1_Healt_lvlStartgegner"]
+[connection signal="Heltmeter" from="." to="rolling_joe" method="_on_Level1_Heltmeter"]
+[connection signal="Rounds" from="." to="Uhr" method="_on_Level1_Rounds"]
+[connection signal="finished" from="." to="Player" method="_on_Level1_finished"]
+[connection signal="health_changed" from="." to="CanvasLayer/Healtbar" method="_on_Level1_health_changed"]
+[connection signal="position1" from="." to="rolling_joe" method="_on_Level1_position1"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="blockingsucessful" from="Player" to="rolling_joe" method="_on_Player_blockingsucessful"]
+[connection signal="camara" from="Player" to="." method="_on_Player_camara"]
+[connection signal="died" from="Player" to="." method="_on_Player_died"]
+[connection signal="health_changed" from="Player" to="." method="_on_Player_health_changed"]
+[connection signal="health_changed" from="Player" to="CanvasLayer/Healtbar" method="_on_Player_health_changed"]
+[connection signal="position_changed" from="Player" to="rolling_joe" method="_on_Player_position_changed"]
+[connection signal="blocked" from="rolling_joe" to="Player" method="_on_rolling_joe_blocked"]
+[connection signal="died" from="rolling_joe" to="." method="_on_rolling_joe_died"]
+[connection signal="health_changed_enemy" from="rolling_joe" to="." method="_on_rolling_joe_health_changed_enemy"]
+[connection signal="health_changed_enemy" from="rolling_joe" to="Player" method="_on_rolling_joe_health_changed_enemy"]
+[connection signal="health_changed_enemy" from="rolling_joe" to="CanvasLayer/TextureProgress" method="_on_rolling_joe_health_changed_enemy"]
+[connection signal="isvisible" from="Settings" to="CanvasLayer/TextureProgress" method="_on_Settings_isvisible"]
+[connection signal="menuclosed" from="Settings" to="." method="_on_Settings_menuclosed"]
+[connection signal="menuclosed" from="Settings" to="Uhr" method="_on_Settings_menuclosed"]
+[connection signal="menuopen" from="Settings" to="." method="_on_Settings_menuopen"]
+[connection signal="menuopen" from="Settings" to="Uhr" method="_on_Settings_menuopen"]

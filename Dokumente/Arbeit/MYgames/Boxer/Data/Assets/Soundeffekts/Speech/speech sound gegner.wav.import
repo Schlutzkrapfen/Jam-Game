@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/speech sound gegner.wav-0a640a4045f91a8ec035406411b5d8a7.sample"
+
+[deps]
+
+source_file="res://Data/Assets/Soundeffekts/Speech/speech sound gegner.wav"
+dest_files=[ "res://.import/speech sound gegner.wav-0a640a4045f91a8ec035406411b5d8a7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

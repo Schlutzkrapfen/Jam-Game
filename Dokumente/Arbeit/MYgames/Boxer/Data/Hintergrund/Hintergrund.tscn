@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Data/Assets/Background/Hintergrundfarbe.png" type="Texture" id=1]
+[ext_resource path="res://Data/Assets/Background/Fenster.png" type="Texture" id=2]
+[ext_resource path="res://Data/Skript/Spawner.gd" type="Script" id=3]
+[ext_resource path="res://Data/Wolke.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Data/Wolke1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Data/Assets/Background/Background stadium.png" type="Texture" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Hintergrundfarbe" type="Sprite" parent="."]
+position = Vector2( 139.427, 4.40973 )
+scale = Vector2( 27.6693, 5.18372 )
+texture = ExtResource( 1 )
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2( 395, 0 )
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 7.0
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0.232269, 14.6956 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 36.9404, -8.66408 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 143.279, 15.2132 )
+
+[node name="Node2D8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 246.335, -4.02619 )
+
+[node name="Node2D14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 533.42, 5.16619 )
+
+[node name="Node2D6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 319.349, 17.3666 )
+
+[node name="Node2D10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 428.756, -3.44455 )
+
+[node name="Node2D4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 96.3408, -10.6663 )
+
+[node name="Node2D7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 255.708, 4.56855 )
+
+[node name="Node2D13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 372.845, 11.7359 )
+
+[node name="Node2D11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 485.819, 17.6819 )
+
+[node name="Node2D9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 193.869, -2.80792 )
+
+[node name="Node2D5" parent="." instance=ExtResource( 5 )]
+position = Vector2( -58.5007, -5.9944 )
+
+[node name="BackgroundStadium" type="Sprite" parent="."]
+position = Vector2( 44.5, 197.5 )
+texture = ExtResource( 6 )
+
+[node name="Fenster" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Fenster2" type="Sprite" parent="."]
+position = Vector2( 395, 0 )
+texture = ExtResource( 2 )

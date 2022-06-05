@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ruhig erster versuch .mp3-417cb41eee5d3421950901ecf615a80a.mp3str"
+
+[deps]
+
+source_file="res://Data/Assets/Musik/ruhig erster versuch .mp3"
+dest_files=[ "res://.import/ruhig erster versuch .mp3-417cb41eee5d3421950901ecf615a80a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Block 1 sound.wav-1df68c40a35ba29fa5cb2322a2f2cbd0.sample"
+
+[deps]
+
+source_file="res://Data/Assets/Soundeffekts/Boxen/gegner/Block 1 sound.wav"
+dest_files=[ "res://.import/Block 1 sound.wav-1df68c40a35ba29fa5cb2322a2f2cbd0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
