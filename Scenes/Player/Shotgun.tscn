@@ -1,66 +1,153 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://Scenes/Player/Weapon.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Player/Shutgun-sheet.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_15.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UI/[32x96]Shotgun_V1.01.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_1.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_3.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_0.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_0.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_11.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_4.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_0.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_12.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_8.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_1.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-shoot_shotgun_0.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_16.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_7.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_5.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_11.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_13.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_0.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_11.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_6.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_12.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_14.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_1.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_7.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_12.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_11.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_10.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_17.png" type="Texture" id=30]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_8.png" type="Texture" id=31]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_14.png" type="Texture" id=32]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_9.png" type="Texture" id=33]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_4.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_5.png" type="Texture" id=35]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_10.png" type="Texture" id=36]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-shoot_shotgun_1.png" type="Texture" id=37]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_6.png" type="Texture" id=38]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_1.png" type="Texture" id=39]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_13.png" type="Texture" id=40]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_16.png" type="Texture" id=41]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_15.png" type="Texture" id=42]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_5.png" type="Texture" id=43]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_2.png" type="Texture" id=44]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_8.png" type="Texture" id=45]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_4.png" type="Texture" id=46]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_7.png" type="Texture" id=47]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_10.png" type="Texture" id=48]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_14.png" type="Texture" id=49]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_2.png" type="Texture" id=50]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_3.png" type="Texture" id=51]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-shoot_shotgun_2.png" type="Texture" id=52]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_19.png" type="Texture" id=53]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_13.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_9.png" type="Texture" id=55]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_9.png" type="Texture" id=56]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_12.png" type="Texture" id=57]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_3.png" type="Texture" id=58]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_2.png" type="Texture" id=59]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_6.png" type="Texture" id=60]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_7.png" type="Texture" id=61]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_4.png" type="Texture" id=62]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_3.png" type="Texture" id=63]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_8.png" type="Texture" id=64]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_5.png" type="Texture" id=65]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_13.png" type="Texture" id=66]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-meleeattack_shotgun_9.png" type="Texture" id=67]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_6.png" type="Texture" id=68]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_17.png" type="Texture" id=69]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_18.png" type="Texture" id=70]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_16.png" type="Texture" id=71]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_17.png" type="Texture" id=72]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_19.png" type="Texture" id=73]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_15.png" type="Texture" id=74]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_18.png" type="Texture" id=75]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_10.png" type="Texture" id=76]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_2.png" type="Texture" id=77]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_18.png" type="Texture" id=78]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_19.png" type="Texture" id=79]
+[ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_14.png" type="Texture" id=80]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
 
 [sub_resource type="Animation" id=2]
+resource_name = "fire"
+length = 0.3
+step = 0.05
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 3.5
+loop = true
+
+[sub_resource type="Animation" id=5]
 resource_name = "reload"
-length = 0.55
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 4, 0 ]
-}
+length = 0.5
+
+[sub_resource type="Animation" id=4]
+resource_name = "run"
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 59 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 65 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 45 ), ExtResource( 33 ), ExtResource( 76 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 80 ), ExtResource( 42 ), ExtResource( 15 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "idle",
+"speed": 18.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 39 ), ExtResource( 44 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 43 ), ExtResource( 38 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 67 ), ExtResource( 36 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 66 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "meeleattack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 25 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 68 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 55 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 57 ), ExtResource( 54 ), ExtResource( 32 ), ExtResource( 2 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 75 ), ExtResource( 53 ) ],
+"loop": true,
+"name": "move",
+"speed": 18.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 77 ), ExtResource( 58 ), ExtResource( 46 ), ExtResource( 17 ), ExtResource( 22 ), ExtResource( 47 ), ExtResource( 64 ), ExtResource( 56 ), ExtResource( 48 ), ExtResource( 8 ), ExtResource( 23 ), ExtResource( 40 ), ExtResource( 24 ), ExtResource( 74 ), ExtResource( 41 ), ExtResource( 30 ), ExtResource( 78 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "reload",
+"speed": 18.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 37 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 18.0
+} ]
 
 [node name="Shotgun" type="Node2D"]
-rotation = 1.5708
-scale = Vector2( 3, 3 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 semi_auto = false
-bulletspread = 0.1
-clip_size = 5
+bulletspread = 0.4
+bullets = 10.0
+clip_size = 2
+reserve_ammo = 20
+damage = 0.2
 
 [node name="end_of_weapon" type="Node2D" parent="."]
-position = Vector2( -2.38419e-07, -6.33333 )
+position = Vector2( 135, 47 )
 
 [node name="firespeed" type="Timer" parent="."]
 one_shot = true
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-hframes = 5
-
 [node name="ReloadTime" type="Timer" parent="."]
 wait_time = 0.55
 one_shot = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Sprite")
-anims/RESET = SubResource( 1 )
-anims/reload = SubResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -69,3 +156,14 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/fire = SubResource( 2 )
+anims/idle = SubResource( 3 )
+anims/reload = SubResource( 5 )
+anims/run = SubResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 6 )
+animation = "move"

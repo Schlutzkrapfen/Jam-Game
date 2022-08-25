@@ -1,8 +1,80 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://Scenes/Player/Weapon.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Player/Pistol.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_2.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UI/Pistel_used_Ui.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_7.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_19.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_13.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_3.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_4.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_0.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_5.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_10.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_9.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_10.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_4.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_6.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_3.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_5.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_11.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-shoot_handgun_2.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_3.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_11.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_7.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_8.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_1.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_15.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_1.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_2.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_1.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_9.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_13.png" type="Texture" id=30]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_11.png" type="Texture" id=31]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_7.png" type="Texture" id=32]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_10.png" type="Texture" id=33]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_5.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_11.png" type="Texture" id=35]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_16.png" type="Texture" id=36]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_13.png" type="Texture" id=37]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_1.png" type="Texture" id=38]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_14.png" type="Texture" id=39]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_16.png" type="Texture" id=40]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_18.png" type="Texture" id=41]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_6.png" type="Texture" id=42]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_4.png" type="Texture" id=43]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_3.png" type="Texture" id=44]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_0.png" type="Texture" id=45]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_6.png" type="Texture" id=46]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_8.png" type="Texture" id=47]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_0.png" type="Texture" id=48]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_9.png" type="Texture" id=49]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_0.png" type="Texture" id=50]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_13.png" type="Texture" id=51]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_9.png" type="Texture" id=52]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_14.png" type="Texture" id=53]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_8.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-shoot_handgun_0.png" type="Texture" id=55]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_4.png" type="Texture" id=56]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_17.png" type="Texture" id=57]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_10.png" type="Texture" id=58]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_12.png" type="Texture" id=59]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_14.png" type="Texture" id=60]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_12.png" type="Texture" id=61]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_6.png" type="Texture" id=62]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_12.png" type="Texture" id=63]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_12.png" type="Texture" id=64]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_5.png" type="Texture" id=65]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_19.png" type="Texture" id=66]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_15.png" type="Texture" id=67]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_2.png" type="Texture" id=68]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_7.png" type="Texture" id=69]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_17.png" type="Texture" id=70]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_2.png" type="Texture" id=71]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-shoot_handgun_1.png" type="Texture" id=72]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_8.png" type="Texture" id=73]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_18.png" type="Texture" id=74]
+[ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_14.png" type="Texture" id=75]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -35,24 +107,51 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 55 ), ExtResource( 72 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "fire",
+"speed": 18.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 38 ), ExtResource( 27 ), ExtResource( 7 ), ExtResource( 56 ), ExtResource( 10 ), ExtResource( 62 ), ExtResource( 4 ), ExtResource( 73 ), ExtResource( 52 ), ExtResource( 13 ), ExtResource( 21 ), ExtResource( 61 ), ExtResource( 6 ), ExtResource( 53 ), ExtResource( 67 ), ExtResource( 40 ), ExtResource( 57 ), ExtResource( 41 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 18.0
+}, {
+"frames": [ ExtResource( 48 ), ExtResource( 26 ), ExtResource( 2 ), ExtResource( 16 ), ExtResource( 43 ), ExtResource( 34 ), ExtResource( 15 ), ExtResource( 69 ), ExtResource( 23 ), ExtResource( 49 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 63 ), ExtResource( 51 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "melee",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 28 ), ExtResource( 71 ), ExtResource( 20 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 42 ), ExtResource( 32 ), ExtResource( 47 ), ExtResource( 12 ), ExtResource( 58 ), ExtResource( 18 ), ExtResource( 64 ), ExtResource( 37 ), ExtResource( 60 ), ExtResource( 25 ), ExtResource( 36 ), ExtResource( 70 ), ExtResource( 74 ), ExtResource( 66 ) ],
+"loop": true,
+"name": "move",
+"speed": 18.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 24 ), ExtResource( 68 ), ExtResource( 44 ), ExtResource( 8 ), ExtResource( 65 ), ExtResource( 46 ), ExtResource( 22 ), ExtResource( 54 ), ExtResource( 29 ), ExtResource( 11 ), ExtResource( 31 ), ExtResource( 59 ), ExtResource( 30 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "reload",
+"speed": 18.0
+} ]
+
 [node name="Pistol" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 clip_size = 11
 
 [node name="end_of_weapon" type="Node2D" parent="."]
+position = Vector2( 116, 52 )
 
 [node name="firespeed" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-
 [node name="ReloadTime" type="Timer" parent="."]
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Sprite")
+root_node = NodePath("")
 anims/RESET = SubResource( 1 )
 anims/reload = SubResource( 2 )
 
@@ -63,3 +162,7 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+animation = "fire"
