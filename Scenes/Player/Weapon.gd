@@ -18,6 +18,7 @@ var clip = 10
 var bullet = preload("res://Scenes/Player/Bullet.tscn")# fire skript
 
 func _ready():
+	$CanvasLayer/TextureRect.set_position(get_viewport_rect().size - Vector2(110,70))
 	clip = clip_size
 func shoot(r):
 	if Input.is_action_pressed("fire") and $firespeed.is_stopped()and clip > 0 and $ReloadTime.is_stopped():
@@ -25,7 +26,7 @@ func shoot(r):
 		clip -= 1
 		for number in range(bullets,0,-1):
 			var bullet_instance = bullet.instance()
-			bullet_instance.position = get_global_position() 
+			bullet_instance.position = $end_of_weapon.get_global_position() 
 			bullet_instance.damage = damage
 			bulletspreadgenerator.randomize()
 			var random = bulletspreadgenerator.randf_range(-bulletspread,bulletspread)
@@ -41,16 +42,20 @@ func shoot(r):
 		
 func start_reload():
 	$ReloadTime.start()
-	if reserve_ammo == 0:
+	if reserve_ammo == 0 or clip == clip_size:
 		return
 	yield($ReloadTime,"timeout")
-
+	$AnimationPlayer.play("reload")
 	if reserve_ammo +clip < clip_size:
 		clip = reserve_ammo +clip
 		reserve_ammo = 0
-		$"../../Ammoniton/RichTextLabel".text = String(clip)+"|" +  String (reserve_ammo)
+		$"../../UI/RichTextLabel".text = String(clip)+"|" +  String (reserve_ammo)
 		return
 	reserve_ammo -= clip_size - clip 
 	clip = clip_size
-	$"../../Ammoniton/RichTextLabel".text = String(clip)+"|" +  String (reserve_ammo)
+	$"../../UI/RichTextLabel".text = String(clip)+"|" +  String (reserve_ammo)
+func UI_hide():
+	$CanvasLayer/TextureRect.visible = false
+func UI_show():
+	$CanvasLayer/TextureRect.visible = true
 

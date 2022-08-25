@@ -1,7 +1,7 @@
 extends KinematicBody2D 
 class_name Player
 export var  speed = 200#walkingspeed
-
+export var healt = 100
 
 var velocity = Vector2()
 
@@ -12,15 +12,24 @@ var weapon_nummber = 0
 
 var weapons: Array = []
 
+func damage(damage):
+	healt -= damage
+	$UI/TextureProgress.value = healt
+	if healt <=0:
+		queue_free()
 
 func _ready() :
 	weapons = $Weaponmaster.get_children()
 	for weapon in weapons:
 		weapon.hide()
+		weapon.UI_hide()
 	current_weapon.show()
-	$Ammoniton/RichTextLabel.text = String (current_weapon.clip)+ "|" +String (current_weapon.reserve_ammo)
+	current_weapon.UI_show()
+	$UI/RichTextLabel.text = String (current_weapon.clip)+ "|" +String (current_weapon.reserve_ammo)
+	$UI/RichTextLabel.set_position(get_viewport_rect().size - Vector2(70,25))
+#	$UI/ProgressBar.set_position(Vector2(get_viewport_rect().size.x -105,10))
 	
-
+	
 func get_current_weapon() -> Weapon:
 	return current_weapon
 	
@@ -30,15 +39,15 @@ func switch_weapon(weapon: Weapon):
 	current_weapon.hide()
 	weapon.show()
 	current_weapon = weapon
-	$Ammoniton/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)
+	$UI/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)
 func _physics_process(_delta):
 	if  Input.is_action_pressed("fire") and !current_weapon.semi_auto:
 		current_weapon.shoot(rotation)
-		$Ammoniton/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)
+		$UI/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)
 	elif Input.is_action_just_pressed("fire") :#and current_weapon.semi_auto:
 		current_weapon.shoot(rotation)
 		  
-		$Ammoniton/RichTextLabel.text = String (current_weapon.clip)+"|" +  String (current_weapon.reserve_ammo)
+		$UI/RichTextLabel.text = String (current_weapon.clip)+"|" +  String (current_weapon.reserve_ammo)
 	look_at(get_global_mouse_position())#  player look to the mousposition
 
 	velocity = Vector2()# simple movmentskript
@@ -60,8 +69,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		current_weapon.start_reload()
 		
 	elif event.is_action_released("weapon+"):
-		 
-		
 		weapon_nummber += 1
 		if weapon_nummber == weapons.size():
 			weapon_nummber = 0
@@ -80,6 +87,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_released("weapon 3"):
 		if 2 <= weapons.size() -1:
 			switch_weapon(weapons[2])
+	for weapon in weapons:
+		weapon.hide()
+		weapon.UI_hide()
+	current_weapon.show()
+	current_weapon.UI_show()
 
 
 
