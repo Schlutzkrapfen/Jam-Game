@@ -23,6 +23,9 @@ color = Color( 0.203922, 0.203922, 0.203922, 1 )
 [node name="Pistol" parent="." instance=ExtResource( 6 )]
 position = Vector2( 225, 425 )
 
+[node name="Pistol2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 228, 118 )
+
 [node name="Pause" parent="." instance=ExtResource( 7 )]
 visible = false
 anchor_left = 0.5
