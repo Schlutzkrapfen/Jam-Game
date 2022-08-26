@@ -36,6 +36,10 @@ config/name="Jam Game"
 run/main_scene="res://Scenes/menues/Main Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Game="*res://Scripts/Game.gd"
+
 [display]
 
 window/vsync/use_vsync=false
@@ -111,6 +115,11 @@ interact={
 "weapon 4"={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":52,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Esc={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 

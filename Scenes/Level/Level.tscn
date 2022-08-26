@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Luzyf's Pack/Level.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Level/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Level/Safe.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Packs/postapo-lands-demo/Level Maker.tres" type="TileSet" id=5]
 
 [sub_resource type="SegmentShape2D" id=1]
@@ -170,6 +171,80 @@ __meta__ = {
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Safes" type="Node2D" parent="."]
+
+[node name="Safe" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 88, 184 )
+
+[node name="Safe7" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 97, -224 )
+
+[node name="Safe8" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 536, 416 )
+
+[node name="Safe9" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 1056, 512 )
+
+[node name="Safe2" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 128, 184 )
+
+[node name="Safe3" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 696, -320 )
+
+[node name="Safe4" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 736, -320 )
+
+[node name="Safe5" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 1928, -550 )
+
+[node name="Safe6" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 1968, -550 )
+
+[node name="Safe10" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 2040, 64 )
+
+[node name="Safe11" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 2080, 64 )
+
+[node name="Safe12" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 2272, -1184 )
+
+[node name="Safe13" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 2312, -1184 )
+
+[node name="Safe14" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 2976, -1616 )
+
+[node name="Safe15" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 2976, -1656 )
+
+[node name="Safe16" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 2784, -1320 )
+
+[node name="Safe17" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 2824, -1320 )
+
+[node name="Safe18" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 1656, -1187 )
+
+[node name="Safe19" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 1696, -1187 )
+
+[node name="Safe20" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 1096, 72 )
+
+[node name="Safe21" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 1136, 72 )
+
+[node name="Safe22" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 768, 61 )
+
+[node name="Safe23" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 808, 61 )
+
+[node name="Safe24" parent="Safes" instance=ExtResource( 3 )]
+position = Vector2( 344, -64 )
 
 [editable path="Doors/Door2"]
 [editable path="Doors/Door3"]

@@ -171,3 +171,9 @@ func _pick_up(weapon,ammo):
 	elif weapon == "Pistol" and Weapon_ready[0] != 0 or weapon == "Pistol_ammo":
 		weapons[Weapon_ready[0]].add_clip(ammo)
 		$UI/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)
+
+func _process(delta):
+	
+	if Input.is_action_pressed("Esc"):
+		$UI/Pause.show()
+		get_tree().paused = true
