@@ -3,6 +3,11 @@ class_name Player
 export var  speed = 200#walkingspeed
 export var healt = 100
 
+
+var Healtupgrade =1
+var ammoupgrade = 1
+var damage_up =1
+
 var velocity = Vector2()
 var Weapon_ready = [0,0,0]#pistol,uzi,shotgun # whit this array you can see an wich place wich weapon is
 var bullet = preload("res://Scenes/Player/Bullet.tscn")
@@ -20,7 +25,6 @@ func damage(damage):
 	$UI/TextureProgress.value = healt
 	if healt <=0:
 		queue_free()
-
 func _ready() :
 	$AnimatedSprite.play("Idle")
 	weapons = $Weaponmaster.get_children()
@@ -177,3 +181,17 @@ func _process(delta):
 	if Input.is_action_pressed("Esc"):
 		$UI/Pause.show()
 		get_tree().paused = true
+
+
+func _on_Pause_menu_closed():
+	while (Game.health_up >Healtupgrade):
+		healt += 10
+		Healtupgrade += 1
+	while (Game.ammo_up > ammoupgrade):
+		for weapon in weapons:
+			weapon.clip_size += 1
+		ammoupgrade += 1
+	while (Game.damage_up > damage_up):
+		for weapon in weapons:
+			weapon.damage += 0.1
+		damage_up += 1
