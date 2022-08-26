@@ -1,7 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/enemy/Test_Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/enemy/Foozle_2DC0015_Lucifer_Goblin_Berserker_Pixel_Art/Down/Png/GoblinDown.png" type="Texture" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=42]
+light_mode = 2
 
 [sub_resource type="Animation" id=34]
 resource_name = "Idle"
@@ -137,6 +140,7 @@ self_modulate = Color( 1.01, 1.01, 1.01, 1 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 42 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 hframes = 35

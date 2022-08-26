@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Player/Weapon.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/Pistel_used_Ui.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Player/Flashlight/survivor-move_flashlight_16.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Player/light.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Player/light1.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Player/Flashlight/survivor-move_flashlight_19.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Player/Flashlight/survivor-idle_flashlight_10.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Player/Flashlight/survivor-meleeattack_flashlight_1.png" type="Texture" id=7]
@@ -96,10 +96,15 @@ margin_bottom = 40.0
 texture = ExtResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 379, -1 )
-rotation = 1.5708
+position = Vector2( 0, -4 )
 texture = ExtResource( 4 )
-texture_scale = 15.0
+offset = Vector2( 1240, 0 )
+texture_scale = 3.0
+energy = 0.8
+mode = 2
+shadow_enabled = true
+shadow_gradient_length = 0.4
+shadow_filter_smooth = 50.0
 
 [node name="firespeed" type="Timer" parent="."]
 wait_time = 0.5

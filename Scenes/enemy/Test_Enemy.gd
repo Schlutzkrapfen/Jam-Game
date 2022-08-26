@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed: float = 200
+export var speed: float = 200
 var acc: float = 1000
 var friction = acc / speed
 var motion: Vector2 = Vector2()
