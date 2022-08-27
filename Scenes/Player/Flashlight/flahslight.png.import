@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Golden glass.png-79f5d48d921187bad451c2e40870f1a6.stex"
+path="res://.import/flahslight.png-16a8cb3cdef4aa41eaae4c1d6eb42057.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Items/Golden glass.png"
-dest_files=[ "res://.import/Golden glass.png-79f5d48d921187bad451c2e40870f1a6.stex" ]
+source_file="res://Scenes/Player/Flashlight/flahslight.png"
+dest_files=[ "res://.import/flahslight.png-16a8cb3cdef4aa41eaae4c1d6eb42057.stex" ]
 
 [params]
 

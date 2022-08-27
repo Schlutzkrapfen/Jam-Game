@@ -135,9 +135,9 @@ script = ExtResource( 1 )
 semi_auto = false
 bulletspread = 0.4
 bullets = 10.0
-clip_size = 2
-reserve_ammo = 20
-damage = 0.2
+clip_size = 4
+reserve_ammo = 1
+damage = 0.7
 
 [node name="end_of_weapon" type="Node2D" parent="."]
 position = Vector2( 135, 47 )

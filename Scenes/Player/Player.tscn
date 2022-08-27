@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/Player.tres" type="SpriteFrames" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Player/Aim.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Luzyf's Pack/theme.tres" type="Theme" id=6]
 [ext_resource path="res://Scenes/menues/Pause.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player/Camera2D.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31.5, 31 )
@@ -21,18 +22,17 @@ script = ExtResource( 1 )
 rotation = 1.5708
 texture = ExtResource( 3 )
 texture_scale = 2.0
-energy = 0.6
+color = Color( 0.6, 0.6, 0.6, 1 )
+energy = 0.9
 mode = 2
-range_height = 1.0
 shadow_enabled = true
-shadow_gradient_length = 0.4
+shadow_gradient_length = 0.2
 shadow_filter_smooth = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
+[node name="Camera2D" parent="." instance=ExtResource( 8 )]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )

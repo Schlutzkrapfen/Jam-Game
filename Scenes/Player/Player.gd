@@ -17,13 +17,19 @@ var Uzi = preload("res://Scenes/Player/Uzi.tscn")
 #class_name Weapon
 onready var current_weapon: Weapon = $Weaponmaster/Flashlight
 var weapon_nummber = 0
-
 var weapons: Array = []
+var Game_overscreen = preload("res://Scenes/menues/Game Over.tscn")
+var camera = preload("res://Scenes/Player/Camera2D.tscn")
+var Win_screen = preload("res://Scenes/menues/You Win Screen.tscn")
 
 func damage(damage):
 	healt -= damage
 	$UI/TextureProgress.value = healt
 	if healt <=0:
+		var game_over =Game_overscreen.instance()
+		var cammera = camera.instance()
+		get_parent().add_child(game_over)
+		get_parent().add_child(cammera)
 		queue_free()
 func _ready() :
 	$AnimatedSprite.play("Idle")
@@ -175,6 +181,9 @@ func _pick_up(weapon,ammo):
 	elif weapon == "Pistol" and Weapon_ready[0] != 0 or weapon == "Pistol_ammo":
 		weapons[Weapon_ready[0]].add_clip(ammo)
 		$UI/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)
+	elif weapon == "Win":
+		var winscreen = Win_screen.instance()
+		add_child(winscreen)
 
 func _process(delta):
 	

@@ -1,6 +1,9 @@
 extends KinematicBody2D
-export var damage = 10
+export var damage = 5
 export var healt = 10
+export var bulletspread:float = 0.4
+export var bullets:int = 2
+export var bullet_speed = 400
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -9,11 +12,14 @@ var death = false
 export var speed: float = 200
 var velocity = Vector2.ZERO
 var player = null
+var player1 = null
 var did_arrive = false
 var Player_Position = Vector2.ZERO
+var bulletspreadgenerator = RandomNumberGenerator.new()
+
 func _ready():
 	set_target_location(position)
-
+var bullet = preload("res://Scenes/enemy/Enemy_Bullet.tscn")
 
 func set_target_location(target:Vector2) -> void:
 	did_arrive = false
@@ -41,14 +47,18 @@ func _on_NavigationAgent2D_velocity_computed(safe_velocity):
 	if not _arrived_at_location():
 		velocity =move_and_slide(safe_velocity)
 	elif not did_arrive:
-		#$AnimationPlayer.play("Idle")
+		$AnimationPlayer.play("Idle")
 		did_arrive = true
 		
 func _on_Area2D2_body_entered(body):
 	while body.is_in_group("player")and !death:
-		$Hurtbox.look_at(body.position)
-		$Hurtbox.rotation_degrees -= 90# I dont understand why i need to use 90 
+		player1 = body
+		
+		player = null
+
 		$AnimationPlayer.play("attack")
+		yield(get_tree().create_timer(.8), "timeout")
+		shoot()
 		yield($AnimationPlayer,"animation_finished")
 func _on_Area2D2_body_exited(body):
 	if body.is_in_group("player")and !death:
@@ -61,20 +71,30 @@ func _on_Area2D_body_exited(body):
 		$AnimationPlayer.play("Run") 
 func damage(_damage):
 	healt -= _damage
-	$AnimationPlayer.play("damage")
+	
 	if healt <= 0:
 		death = true
 		player = null
 		$AnimationPlayer.play("death")
 		yield($AnimationPlayer,"animation_finished")
 		queue_free()
-	
-func _on_Hurtbox_body_entered(body):
-	if body.is_in_group("player")and !death:
-		body.damage(damage)
+	$AnimationPlayer.play("damage")
 
 
 
 func _on_Shotgun_player_postion(_postion):
  
 	set_target_location(_postion)
+
+func  shoot():
+	print(player1)
+	for number in range(bullets,0,-1):
+		var bullet_instance = bullet.instance()
+		bullet_instance.position = $end_of_weapon.get_global_position() 
+		bullet_instance.damage = damage
+		bulletspreadgenerator.randomize()
+		var random = bulletspreadgenerator.randf_range(-bulletspread,bulletspread)
+		$end_of_weapon.look_at(player1.position)
+		bullet_instance.rotation = ($end_of_weapon.rotation+random)
+		bullet_instance.apply_impulse(Vector2(),Vector2(bullet_speed,0).rotated($end_of_weapon.rotation+random))
+		get_tree().get_root().add_child(bullet_instance)

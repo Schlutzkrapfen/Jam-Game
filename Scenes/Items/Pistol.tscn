@@ -22,7 +22,7 @@ contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )
 Item_name = "Pistol"
-Ammo_amount = 20
+Ammo_amount = 10
 
 [node name="PistelUsedUi" type="Sprite" parent="."]
 material = SubResource( 4 )
