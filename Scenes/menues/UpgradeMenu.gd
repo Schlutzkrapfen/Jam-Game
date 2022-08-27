@@ -28,17 +28,20 @@ func _on_Ammo_Button_pressed():
 	if Game.gold >= 500:
 		Game.ammo_up += 1
 		Game.gold -= 500
+		$Sound_upgrade.play()
 
 
 func _on_Health_Button_pressed():
 	if Game.gold >= 500:
 		Game.health_up += 1
 		Game.gold -= 500
+		$Sound_upgrade.play()
 
 func _on_Damage_Button_pressed():
 	if Game.gold >= 500:
 		Game.damage_up += 1
 		Game.gold -= 500
+		$Sound_upgrade.play()
 
 func _on_Main_Menu_pressed():
 	get_tree().change_scene("res://Scenes/menues/Main Menu.tscn")

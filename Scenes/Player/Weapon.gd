@@ -18,17 +18,21 @@ var running = false
 
 var bullet = preload("res://Scenes/Player/Bullet.tscn")# fire skript
 
+
 func _ready():
 	$CanvasLayer/TextureRect.set_position(get_viewport_rect().size - Vector2(110,70))
 	clip = clip_size
+	
 	if running:
 		$AnimatedSprite.play("move")
 		return
 	$AnimatedSprite.play("idle")
+	
 func shoot(r):
 	if Input.is_action_pressed("fire") and $firespeed.is_stopped()and clip > 0 and $ReloadTime.is_stopped():
 		$firespeed.start()
 		$AnimatedSprite.play("fire")
+		$Sound_shoot.play()
 		clip -= 1
 		for number in range(bullets,0,-1):
 			var bullet_instance = bullet.instance()
@@ -62,7 +66,7 @@ func start_reload():
 	if reserve_ammo == 0 or clip == clip_size:
 		return
 	yield($ReloadTime,"timeout")
-	
+	$Sound_reload.play()
 	$AnimatedSprite.play("reload")
 	if reserve_ammo +clip < clip_size:
 		clip = reserve_ammo +clip
@@ -76,6 +80,7 @@ func start_reload():
 		return
 	reserve_ammo -= clip_size - clip 
 	clip = clip_size
+	
 	yield($AnimatedSprite,"animation_finished")
 	
 	$"../../UI/RichTextLabel".text = String(clip)+"|" +  String (reserve_ammo)
@@ -94,3 +99,5 @@ func move():
 		$AnimatedSprite.play("move")
 		return
 	$AnimatedSprite.play("idle")
+func make_reload_sound():
+	$Sound_reload.play()

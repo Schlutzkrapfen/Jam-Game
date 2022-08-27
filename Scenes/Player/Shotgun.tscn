@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://Scenes/Player/Weapon.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/Shotgun/survivor-move_shotgun_15.png" type="Texture" id=2]
@@ -80,6 +80,8 @@
 [ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_18.png" type="Texture" id=78]
 [ext_resource path="res://Scenes/Player/Shotgun/survivor-reload_shotgun_19.png" type="Texture" id=79]
 [ext_resource path="res://Scenes/Player/Shotgun/survivor-idle_shotgun_14.png" type="Texture" id=80]
+[ext_resource path="res://Assets/Sound/Explosion1.wav" type="AudioStream" id=81]
+[ext_resource path="res://Assets/Sound/Reloading_shotgun.mp3" type="AudioStream" id=82]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -167,3 +169,11 @@ anims/run = SubResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
 animation = "move"
+
+[node name="Sound_shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 81 )
+bus = "SFX"
+
+[node name="Sound_reload" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 82 )
+bus = "SFX"

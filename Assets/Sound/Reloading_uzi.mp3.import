@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Reloading_uzi.mp3-e4aedc7a454f0e4b2af75118bdece39a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Reloading_uzi.mp3"
+dest_files=[ "res://.import/Reloading_uzi.mp3-e4aedc7a454f0e4b2af75118bdece39a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

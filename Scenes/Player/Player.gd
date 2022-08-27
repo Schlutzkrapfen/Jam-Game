@@ -25,6 +25,7 @@ var Win_screen = preload("res://Scenes/menues/You Win Screen.tscn")
 func damage(damage):
 	healt -= damage
 	$UI/TextureProgress.value = healt
+	$Sound_damage.play()
 	if healt <=0:
 		var game_over =Game_overscreen.instance()
 		var cammera = camera.instance()
@@ -110,14 +111,17 @@ func _physics_process(_delta):
 	move_and_slide(velocity)
 	
 	if velocity == Vector2(0,0):
+		
 		if current_weapon.running == true:
 			current_weapon.move()
+			$sound_walking.stop()
 			$AnimatedSprite.play("Idle")
 		current_weapon.running = false
 	elif velocity != Vector2(0,0):
+		
 		if current_weapon.running == false:
 			current_weapon.move()
-			
+			$sound_walking.play()
 		current_weapon.running = true
 	
 func _unhandled_input(event: InputEvent) -> void:
@@ -160,6 +164,7 @@ func _pick_up(weapon,ammo):
 		weapons = $Weaponmaster.get_children()
 		Weapon_ready[2] = weapons.size() -1
 		switch_weapon(weapons[weapons.size() -1])
+		current_weapon.make_reload_sound()
 	elif weapon == "Shotgun" and Weapon_ready[2] != 0 or weapon == "Shotgun_ammo":
 		weapons[Weapon_ready[2]].add_clip(ammo)
 		$UI/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)
@@ -169,6 +174,7 @@ func _pick_up(weapon,ammo):
 		weapons = $Weaponmaster.get_children()
 		Weapon_ready[1] = weapons.size() -1
 		switch_weapon(weapons[weapons.size() -1])
+		current_weapon.make_reload_sound()
 	elif weapon == "Uzi" and Weapon_ready[1] != 0 or weapon == "Uzi_ammo":
 		weapons[Weapon_ready[1]].add_clip(ammo)
 		$UI/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)
@@ -178,6 +184,7 @@ func _pick_up(weapon,ammo):
 		weapons = $Weaponmaster.get_children()
 		Weapon_ready[0] = weapons.size() -1
 		switch_weapon(weapons[weapons.size() -1])
+		current_weapon.make_reload_sound()
 	elif weapon == "Pistol" and Weapon_ready[0] != 0 or weapon == "Pistol_ammo":
 		weapons[Weapon_ready[0]].add_clip(ammo)
 		$UI/RichTextLabel.text = String (current_weapon.clip) +"|" +  String (current_weapon.reserve_ammo)

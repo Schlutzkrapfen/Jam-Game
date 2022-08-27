@@ -29,7 +29,7 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("player") and !death:
 		player = body
 		
-		
+		$Sound_walking.play()
 		$AnimationPlayer.play("Run")
 		
 func _physics_process(delta):
@@ -37,6 +37,7 @@ func _physics_process(delta):
 	velocity = move_direction * speed
 	navigation.set_velocity(velocity)
 	if player != null:
+		$Sound_walking.stop()
 		set_target_location(player.global_position)
 	
 func _arrived_at_location() -> bool:
@@ -55,7 +56,7 @@ func _on_Area2D2_body_entered(body):
 		player1 = body
 		
 		player = null
-
+		$Sound_walking.stop()
 		$AnimationPlayer.play("attack")
 		yield(get_tree().create_timer(.8), "timeout")
 		shoot()
@@ -67,8 +68,9 @@ func _on_Area2D_body_exited(body):
 	if body.is_in_group("player")and !death:
 		player = null
 		set_target_location(body.global_position)
-	
+		
 		$AnimationPlayer.play("Run") 
+		
 func damage(_damage):
 	healt -= _damage
 	
@@ -79,6 +81,7 @@ func damage(_damage):
 		yield($AnimationPlayer,"animation_finished")
 		queue_free()
 	$AnimationPlayer.play("damage")
+	$Sound_damage.play()
 
 
 
@@ -87,8 +90,8 @@ func _on_Shotgun_player_postion(_postion):
 	set_target_location(_postion)
 
 func  shoot():
-	print(player1)
 	for number in range(bullets,0,-1):
+		$Sound_attack.play()
 		var bullet_instance = bullet.instance()
 		bullet_instance.position = $end_of_weapon.get_global_position() 
 		bullet_instance.damage = damage

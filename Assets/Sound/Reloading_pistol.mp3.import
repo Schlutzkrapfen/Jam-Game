@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Reloading_pistol.mp3-961688a57fe7e9eddc562d6d04e6d9b6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Reloading_pistol.mp3"
+dest_files=[ "res://.import/Reloading_pistol.mp3-961688a57fe7e9eddc562d6d04e6d9b6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

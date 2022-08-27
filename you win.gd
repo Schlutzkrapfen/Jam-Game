@@ -5,7 +5,6 @@ extends Control
 # var a = 2
 # var b = "text"
 
-
 # Called when the node enters the scene tree for the first time.
 func _on_Main_Menu_pressed():
 	get_tree().change_scene("res://Scenes/menues/Main Menu.tscn")

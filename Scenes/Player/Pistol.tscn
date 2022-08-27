@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://Scenes/Player/Weapon.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/Pistol/survivor-meleeattack_handgun_2.png" type="Texture" id=2]
@@ -75,6 +75,8 @@
 [ext_resource path="res://Scenes/Player/Pistol/survivor-idle_handgun_8.png" type="Texture" id=73]
 [ext_resource path="res://Scenes/Player/Pistol/survivor-move_handgun_18.png" type="Texture" id=74]
 [ext_resource path="res://Scenes/Player/Pistol/survivor-reload_handgun_14.png" type="Texture" id=75]
+[ext_resource path="res://Assets/Sound/powerfull gun shot.wav" type="AudioStream" id=76]
+[ext_resource path="res://Assets/Sound/Reloading_pistol.mp3" type="AudioStream" id=77]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -167,3 +169,10 @@ texture = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
 animation = "fire"
+
+[node name="Sound_shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 76 )
+
+[node name="Sound_reload" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 77 )
+bus = "Music"

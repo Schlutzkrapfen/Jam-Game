@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/Player.tres" type="SpriteFrames" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Assets/Luzyf's Pack/theme.tres" type="Theme" id=6]
 [ext_resource path="res://Scenes/menues/Pause.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Player/Camera2D.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Sound/Walking on Concrete Series.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Sound/hurt.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Sound/pickup.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31.5, 31 )
@@ -72,3 +75,14 @@ enabled = true
 cast_to = Vector2( 200, 0 )
 collision_mask = 2
 script = ExtResource( 5 )
+
+[node name="Sound_pickup_key" type="AudioStreamPlayer" parent="Aim"]
+stream = ExtResource( 11 )
+
+[node name="sound_walking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+bus = "SFX"
+
+[node name="Sound_damage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+bus = "SFX"

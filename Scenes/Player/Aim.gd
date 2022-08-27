@@ -14,4 +14,5 @@ func _process(delta):
 	if is_colliding() and collider is Interactable:
 		
 		if Input.is_action_just_pressed("interact"):
+			$Sound_pickup_key.play()
 			collider.interact()

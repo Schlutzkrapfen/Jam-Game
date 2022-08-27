@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Packs/postapo-lands-demo/Level Maker.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Packs/postapo-lands-demo/32x32_DEMO.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/enemy/Test_Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/enemy/Range_Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Items/Shotgun.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CanvasItemMaterial" id=3]
 light_mode = 2
@@ -94,3 +95,6 @@ color = Color( 0.388235, 0.309804, 0.309804, 1 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
 navpoly = SubResource( 4 )
+
+[node name="Shotgun" parent="." instance=ExtResource( 7 )]
+position = Vector2( -51, 623 )

@@ -22,7 +22,7 @@ func set_target_location(target:Vector2) -> void:
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player") and !death:
 		player = body
-		
+		$Sound_walking.play()
 		
 		$AnimationPlayer.play("Run")
 		
@@ -49,6 +49,7 @@ func _on_Area2D2_body_entered(body):
 		$Hurtbox.look_at(body.position)
 		$Hurtbox.rotation_degrees -= 90# I dont understand why i need to use 90 
 		$AnimationPlayer.play("attack")
+		
 		yield($AnimationPlayer,"animation_finished")
 func _on_Area2D2_body_exited(body):
 	if body.is_in_group("player")and !death:
@@ -56,15 +57,18 @@ func _on_Area2D2_body_exited(body):
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("player")and !death:
 		player = null
+		$Sound_walking.stop()
 		set_target_location(body.global_position)
 	
 		$AnimationPlayer.play("Run") 
 func damage(_damage):
+	$Sound_damage.play()
 	healt -= _damage
 	$AnimationPlayer.play("damage")
 	if healt <= 0:
 		death = true
 		player = null
+		$Sound_walking.stop()
 		$AnimationPlayer.play("death")
 		yield($AnimationPlayer,"animation_finished")
 		queue_free()
