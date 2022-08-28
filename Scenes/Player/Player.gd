@@ -18,7 +18,7 @@ var Uzi = preload("res://Scenes/Player/Uzi.tscn")
 onready var current_weapon: Weapon = $Weaponmaster/Flashlight
 var weapon_nummber = 0
 var weapons: Array = []
-var Game_overscreen = preload("res://Scenes/menues/Game Over.tscn")
+var Game_overscreen = preload("res://Scenes/menues/UpgradeMenu.tscn")
 var camera = preload("res://Scenes/Player/Camera2D.tscn")
 var Win_screen = preload("res://Scenes/menues/You Win Screen.tscn")
 

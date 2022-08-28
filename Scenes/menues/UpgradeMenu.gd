@@ -21,6 +21,9 @@ func _process(delta):
 		upgrades.get_node("Health/Health_Button").disabled = true
 	if Game.ammo_up == 4:
 		upgrades.get_node("Ammo/Ammo_Button").disabled = true
+	if Game.damage_up == 4:
+		upgrades.get_node("Damage/Damage_Button").disabled = true
+		
 	
 	
 
